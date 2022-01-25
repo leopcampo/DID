@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<turma>
+	<metadados>
+		<codigo>2021.1</codigo>
+		<curso>12796</curso>
+		<sala>601</sala>
+    </metadados>
+    <alunos>
+	    <aluno>
+            <nome>Anna</nome>
+            <email>anna@gmail.com</email>
+        </aluno>
+        <aluno>
+            <nome>Gabriel</nome>
+            <email>gabriel@gmail.com</email>
+        </aluno>
+    </alunos>
+</turma>

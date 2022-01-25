@@ -1,0 +1,60 @@
+<script>
+    /**
+     * ./404.html
+     * 
+     * Esta é uma implementação experimental!
+     * 
+     * Este arquivo é executado sempre que uma determinada página acessada não 
+     * é encontrada no servidor.
+     *   Referências: https://pt.wikipedia.org/wiki/HTTP_404
+     * 
+     * Isso funcionará em servidores sem suporte a SPA ou redirecionamentos com
+     * '.htaccess' ou similar. Por exemplo, no serviço GitHub Pages.
+     *   Referências:
+     *     https://httpd.apache.org/docs/2.2/pt-br/howto/htaccess.html
+     *     https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site
+     * 
+     * Neste app, este arquivo é responsável pelo processamento do SPA, 
+     * permitindo acesso direto na URL as páginas do site.
+     * 
+     * Para funcionar, depende de suporte do 'localStorage' do JavaScript e do 
+     * suporte à página de 'erro 404' (404.html).
+     * 
+     * Quando acessamos uma página específica diretamente, por exemplo 
+     * 'http://localhost:3000/about', este script grava a rota 'about' no 
+     * localStorage do navegador e redireciona para a 'index.html' que vai ler e 
+     * processar esta rota.
+     * 
+     * Isso só funciona, por enquando, na rota filha direta, assim, 
+     * por exemplo, acessar 'http://localhost:3000/about/app' é o mesmo que 
+     * acessar http://localhost:3000/about.
+     * 
+     *   Referências: 
+     *     https://medium.com/swlh/how-to-host-your-angular-reactjs-vuejs-spa-on-github-pages-2d9ab102ac7b
+     * 
+     *
+     * By Luferat -   - http://github.com/Luferat 
+     * MIT License - https://opensource.org/licenses/MIT
+     */
+
+    /**
+     * Obtém as partes do URL usando 'split()'.
+     *   Referências: 
+     *     https://www.w3schools.com/jsref/jsref_split.asp
+     */
+    const path = window.location.pathname.split('/');
+
+    /**
+     * Armazena rota inicial 'path[1]' no 'localStorage'.
+     *   Referências: 
+     *     https://www.w3schools.com/jsref/prop_win_localstorage.asp 
+     */
+    localStorage.setItem('path', path[1]);
+
+    /**
+     * Redireciona para a 'index.html'.
+     *   Referências: 
+     *     https://www.w3schools.com/js/js_window_location.asp
+     */
+    window.location.href = '../';
+</script>

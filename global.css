@@ -1,0 +1,363 @@
+/** ./global.css
+ * 
+ * Esta é a folha de estilos principal do aplicativo. 
+ * 
+ * By Luferat -   - http://github.com/Luferat 
+ * MIT License - https://opensource.org/licenses/MIT
+ */
+
+/* Variáveis
+ * Define algumas configurações iniciais para o app.
+ */
+
+:root {
+    --font-family: helvetica;
+    --font-size: 16px;
+    --bg-color: rgb(0, 14, 36);
+    --bg-image: url("../assets/img/background_01.jpg");
+    --max-width: 1024px;
+    --min-width: 280px;
+}
+
+/* Reset do CSS
+ * Faz com que a página apareça sempre igual em qualquer navegador moderno.
+ */
+
+* {
+    /* Margin e padding não interferem em width e height */
+    box-sizing: border-box;
+    /* Remover bordas de elementos selecionados */
+    outline: none;
+    /* Aplica atraso em efeitos de transição */
+    /* transition: .1s; */
+}
+
+html, body, header, footer, nav, main, article, aside, p, h1, h2, h3, h4, h5, h6, blockquote {
+    display: block;
+    width: 100%;
+}
+
+body, html {
+    /* Força posicionamento relativo. Permite aplicar height em blocos. */
+    position: relative;
+    /* Remove margem e enchimento */
+    padding: 0;
+    margin: 0;
+    /* Ocupar tela inteira */
+    width: 100%;
+    height: 100%;
+    /* Define fonte padrão e medida da unidade 'rem' (font-size) */
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+blockquote {
+    margin-left: 3rem;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* Fundo da página */
+body {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Quadro principal <div.wrap>
+ * Controla a exibição de todos os blocos do app, principalmente "sticky footer".
+ */
+
+.wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.header, div.nav, div.main, div.footer {
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Cabeçalho <header> */
+
+.wrap>header {
+    background: rgba(0, 0, 0, .8);
+}
+
+div.header {
+    display: flex;
+    align-items: center;
+}
+
+div.header img {
+    display: block;
+    margin: .25rem .5rem .25rem .25rem;
+    width: 45px;
+    height: 45px;
+}
+
+div.header h1 {
+    -webkit-text-stroke: 1px white;
+    color: var(--bg-color);
+    padding: 0;
+    font-size: 1.5rem;
+    color: darkgreen;
+    margin: 0;
+}
+
+#menuToggle {
+    margin: auto .5rem auto auto;
+    /* Conserta bug da rolagem vertical durante a animação. */
+    font-size: 1.5rem;
+    color: white;
+    transition: .2s;
+    text-decoration: none;
+}
+
+/* Responsividade do cabeçalho
+ * Para resoluções de 576px ou mais...
+ */
+
+@media (min-width: 576px) {
+
+    /* Aumenta tamanho da fonte do título em telas maiores */
+    div.header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Responsividade do cabeçalho
+ * Para resoluções de 768px ou mais...
+ */
+
+@media (min-width: 768px) {
+
+    /* Oculta botão do menu em telas maiores */
+    #menuToggle {
+        display: none;
+    }
+}
+
+/* Menu principal <nav> */
+
+div.nav {
+    background: #044768;
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    box-shadow: -4px 6px 5px 0px #000;
+    border-bottom-left-radius: .35rem;
+    transition: .1s;
+    /* Tempo da animação */
+    transform-origin: right top;
+    /* Ponto de partida da animação */
+}
+
+div.nav a {
+    padding: 1rem 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+div.nav a:last-child {
+    border-bottom-left-radius: .35rem;
+}
+
+div.nav a:hover {
+    color: #044768;
+    background: #ffffff;
+    text-decoration: none;
+}
+
+div.nav a i {
+    font-size: 1.3rem;
+    margin-right: .65rem;
+}
+
+/* Animação que exibe o menu principal */
+.menu-opened {
+    transform: scale(1);
+}
+
+/* Animação que oculta o menu princial */
+.menu-closed {
+    transform: scale(0);
+}
+
+/* Modifica o menu em resoluções maiores */
+
+@media (min-width: 768px) {
+
+    .wrap>nav {
+        background: #04476891;
+        display: block;
+        padding: 1px;
+    }
+
+    div.nav {
+        position: inherit;
+        right: auto;
+        z-index: auto;
+        flex-direction: row;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        justify-content: flex-end;
+        transform: scale(1);
+        /* Exibe o menu principal */
+    }
+
+    div.nav a:first-child {
+        margin-right: auto;
+    }
+
+    div.nav a:last-child {
+        border-radius: 0;
+    }
+
+    div.nav a {
+        padding: 1rem;
+    }
+}
+
+/* Bloco de conteúdo <main> */
+
+div.main {
+    position: relative;
+    height: 100%;
+    background: white;
+
+}
+
+/* Rodapé <footer> */
+
+.wrap>footer {
+    background: rgba(0, 0, 0, .7);
+}
+
+div.footer-top {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-top: 1px dotted grey;
+    border-bottom: 1px dotted grey;
+}
+
+div.footer-top a {
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: white;
+}
+
+div.footer-top a:hover {
+    background: white;
+    color: black;
+}
+
+div.footer-bottom {
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    padding-top: .75rem;
+    padding-bottom: 1rem;
+}
+
+div.footer-bottom div {
+    display: flex;
+    flex-direction: column;
+}
+
+div.footer-bottom a {
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-top: .25rem;
+}
+
+div.footer-bottom a:hover {
+    color: black;
+    background: white;
+    text-decoration: none;
+    border-radius: .25rem;
+}
+
+div.footer-bottom a i {
+    font-size: 1.2rem;
+    margin-right: .25rem;
+}
+
+/* Formata conteúdo das páginas */
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main>article {
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+.main>aside {
+    padding: 0 1rem;
+    border-top: 3px dotted grey;
+    background: rgb(226, 252, 255);
+}
+
+.main>article>h2:first-child {
+    margin-top: 0;
+    padding: 1rem;
+    background: #94ecfc;
+    border-radius: 0 0 .4rem .4rem;
+}
+
+@media (min-width: 768px) {
+    .main {
+        flex-direction: row;
+    }
+
+    .main>aside {
+        min-width: 220px;
+        max-width: 220px;
+        border: none;
+        border-left: 3px dotted grey;
+    }
+}
+
+/* Classes de uso geral. */
+
+.red {
+    color: red;
+}
+
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: .85rem;
+}

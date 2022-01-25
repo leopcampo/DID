@@ -1,0 +1,87 @@
+{
+  "contacts": [
+    {
+      "name": "Joca da Silva",
+      "id": 1
+    },
+    {
+      "name": "Joca da Silva",
+      "email": "joca@silva.com",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "name": "Joca da Silva",
+      "email": "joca@silva.com",
+      "subject": "Assunto do Joca",
+      "message": "Mensagem do Joca",
+      "id": 4
+    },
+    {
+      "name": "Joca da Silva",
+      "email": "joca@silva.com",
+      "subject": "Assunto do Joca",
+      "message": "Mensagem do Joca",
+      "id": 5
+    },
+    {
+      "name": "Renana",
+      "email": "renanascimento12@gmail.com",
+      "subject": "asjdnbksadfds",
+      "message": "a.36eds64ads1gv<br>da",
+      "date": "2022-01-24 15:50:44",
+      "status": "recebido",
+      "id": 6
+    }
+  ],
+  "config": {
+    "clientWidth": "768",
+    "appName": "My.Docs.App",
+    "appSlogan": "Seus documentos em nossas mãos.",
+    "separator": ".:.",
+    "appLogo": "assets/img/logo_64.png",
+    "copyright": "2021 Joca da Silva"
+  },
+  "social": [
+    {
+      "name": "(21) 9876-54321",
+      "href": "tel:5521987654321",
+      "icon": "fas fa-phone-square fa-fw",
+      "nofooter": true
+    },
+    {
+      "name": "WhatsApp",
+      "href": "https://wa.me/5521987654321",
+      "icon": "fab fa-whatsapp-square fa-fw",
+      "nofooter": true
+    },
+    {
+      "name": "E-mail",
+      "href": "maito://contato@mydocsapp.com",
+      "icon": "fas fa-envelope-square fa-fw",
+      "nofooter": true
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/Luferat",
+      "icon": "fab fa-github-square fa-fw"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://linkedin.com/Luferat",
+      "icon": "fab fa-linkedin fa-fw"
+    },
+    {
+      "name": "Facebook",
+      "href": "https://facebook.com/Luferat",
+      "icon": "fab fa-facebook-square fa-fw"
+    },
+    {
+      "name": "Instagram",
+      "href": "https://instagram.com/Luferat",
+      "icon": "fab fa-instagram-square fa-fw"
+    }
+  ]
+}

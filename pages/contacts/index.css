@@ -1,0 +1,85 @@
+/** ./pages/contacts/index.css
+ * Folhas de estilo da página/rota 'contacts'
+ */
+
+#contact {
+    display: block;
+}
+
+#feedback {
+    display: none;
+}
+
+#contact label {
+    display: block;
+    padding: 0 0 .3rem .5rem;
+    font-size: .9rem;
+}
+
+#contact input, #contact textarea, #contact button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: rgb(233, 239, 255);
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    border: 1px dotted grey;
+}
+
+#contact textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+#contact button {
+    background: linear-gradient(rgb(135, 182, 221), rgb(28, 67, 98));
+    color: white;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background: linear-gradient(rgb(251, 151, 114), rgb(163, 44, 0));
+}
+
+#contact input:invalid, #contact textarea:invalid {
+    background: rgb(255, 207, 207);
+    border-bottom: 3px solid red;
+}
+
+#contact input:valid, #contact textarea:valid {
+    background: rgb(233, 239, 255);
+    border-bottom: 3px solid green;
+}
+
+#contact:invalid button {
+    background: linear-gradient(rgb(179, 179, 179), rgb(93, 93, 93));
+    color: rgb(219, 219, 219);
+    cursor: not-allowed;
+}
+
+/* Barra lateral */
+
+aside.contacts div {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+aside.contacts a {
+    display: flex;
+    align-items: center;
+}
+
+aside.contacts a:hover {
+    text-decoration: none;
+}
+
+aside.contacts i {
+    font-size: 2rem;
+}

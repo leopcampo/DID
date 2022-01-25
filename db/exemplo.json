@@ -1,0 +1,17 @@
+{
+    "metadados": {
+        "codigo": "2021.1",
+        "curso": "12796",
+        "sala": "601"
+    },
+    "alunos": [
+        {
+            "nome": "Anna",
+            "email": "anna@gmail.com"
+        },
+        {
+            "nome": "Gabriel",
+            "email": "gabriel@gmail.com"
+        }
+    ]
+}
