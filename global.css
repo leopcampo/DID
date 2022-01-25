@@ -13,8 +13,8 @@
 :root {
     --font-family: helvetica;
     --font-size: 16px;
-    --bg-color: rgb(0, 14, 36);
-    --bg-image: url("../assets/img/background_01.jpg");
+    --bg-color: #232424;
+    --bg-image: url("../assets/img/background02.jpg");
     --max-width: 1024px;
     --min-width: 280px;
 }
@@ -56,7 +56,7 @@ blockquote {
 }
 
 a {
-    color: steelblue;
+    color: #232424;
     text-decoration: none;
 }
 
@@ -118,7 +118,7 @@ div.header h1 {
     color: var(--bg-color);
     padding: 0;
     font-size: 1.5rem;
-    color: darkgreen;
+    color: rgba(80, 80, 79, 0.664);
     margin: 0;
 }
 
@@ -158,7 +158,7 @@ div.header h1 {
 /* Menu principal <nav> */
 
 div.nav {
-    background: #044768;
+    background: #232424;
     position: absolute;
     right: 0;
     z-index: 1000;
@@ -185,7 +185,7 @@ div.nav a:last-child {
 }
 
 div.nav a:hover {
-    color: #044768;
+    color: #232424;
     background: #ffffff;
     text-decoration: none;
 }
@@ -210,7 +210,7 @@ div.nav a i {
 @media (min-width: 768px) {
 
     .wrap>nav {
-        background: #04476891;
+        background: #232424;
         display: block;
         padding: 1px;
     }
@@ -331,7 +331,7 @@ div.footer-bottom a i {
 .main>article>h2:first-child {
     margin-top: 0;
     padding: 1rem;
-    background: #94ecfc;
+    background: #2324244d;
     border-radius: 0 0 .4rem .4rem;
 }
 

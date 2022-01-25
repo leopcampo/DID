@@ -1,44 +1,9 @@
 {
-  "contacts": [
-    {
-      "name": "Joca da Silva",
-      "id": 1
-    },
-    {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Assunto do Joca",
-      "message": "Mensagem do Joca",
-      "id": 4
-    },
-    {
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
-      "subject": "Assunto do Joca",
-      "message": "Mensagem do Joca",
-      "id": 5
-    },
-    {
-      "name": "Renana",
-      "email": "renanascimento12@gmail.com",
-      "subject": "asjdnbksadfds",
-      "message": "a.36eds64ads1gv<br>da",
-      "date": "2022-01-24 15:50:44",
-      "status": "recebido",
-      "id": 6
-    }
-  ],
+  "contacts": [],
+  
   "config": {
     "clientWidth": "768",
-    "appName": "My.Docs.App",
+    "appName": "Documents in Drawer",
     "appSlogan": "Seus documentos em nossas mãos.",
     "separator": ".:.",
     "appLogo": "assets/img/logo_64.png",
