@@ -27,7 +27,7 @@
 
 #contact input, #contact textarea {
     width: 100%;
-    border: 1px dotted grey;
+    border: 1px  grey;
 }
 
 #contact textarea {
@@ -36,7 +36,7 @@
 }
 
 #contact button {
-    background: linear-gradient(rgb(135, 182, 221), rgb(28, 67, 98));
+    background: linear-gradient(rgb(27, 27, 27), rgb(10, 10, 10));
     color: white;
     cursor: pointer;
 }
